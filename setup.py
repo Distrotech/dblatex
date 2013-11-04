@@ -365,10 +365,7 @@ class Install(install):
             raise OSError("not found: %s" % ", ".join(mis_stys))
 
     def run(self):
-        if self.install_layout == "deb":
-            db = DebianInstaller(self)
-        else:
-            db = None
+        db = None
 
         if not(db) and not(self.nodeps):
             try:
